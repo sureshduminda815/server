@@ -1,3 +1,4 @@
+const { log } = require('console')
 const db = require('../models')
 
 // image Upload
@@ -310,7 +311,12 @@ const upload = multer({
 
 
 
+const getLogin= async(req,res)=>{
+console.log("___________________________909090909090");
 
+  let admin = await Admin.findAll({})
+  res.status(200).send(admin)
+}
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -349,6 +355,7 @@ const getAllProducts = async (_req, res) => {
 
 module.exports = {
   addProduct,
+  getLogin,
   getAllProducts,
   getOneProduct,
  updateProduct,

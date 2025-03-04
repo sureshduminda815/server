@@ -26,6 +26,8 @@ router.put('/editProducts/:id', productController.updateProduct)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 router.post('/login', productController.login)
+router.get('/getlogin', productController.getLogin)
+
 router.post('/signUp', productController.signUp)
 
 
