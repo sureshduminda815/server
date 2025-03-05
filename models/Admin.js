@@ -1,5 +1,4 @@
 
-const bcrypt = require('bcryptjs');
 
 module.exports = (sequelize, DataTypes) => {
   const Admin = sequelize.define("Admin", {
