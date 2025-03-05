@@ -84,7 +84,7 @@ router.delete("/image/:id", productController.deleted);
 router.put('/editPricing/:id',pricingController.editPricingPlan);
 router.get('/getPricing', pricingController.getPricing);
 
-
+router.post('/addPricing', pricingController.addPricing);
 
 
 

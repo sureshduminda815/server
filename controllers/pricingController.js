@@ -9,6 +9,25 @@ const getPricing = async (_req, res) => {
     res.json(plans);
   
   }
+  const addPricing = async (req, res) => {
+    const { title, price, features } = req.body; // Extract data from the request body
+  
+    try {
+      // Create a new pricing entry in the database
+      const newPricing = await pricing.create({
+        title,
+        price,
+        features: JSON.stringify(features), // Convert features array to a JSON string
+      });
+  
+      // Respond with the created pricing entry
+      res.status(201).json(newPricing);
+    } catch (err) {
+      console.error('Error adding pricing:', err);
+      res.status(400).json({ error: 'Failed to add pricing' });
+    }
+  };
+  
   
 
   
@@ -40,7 +59,7 @@ const getPricing = async (_req, res) => {
   
 
 module.exports = {
-   getPricing,editPricingPlan
+   getPricing,editPricingPlan,addPricing
   
   
   }
