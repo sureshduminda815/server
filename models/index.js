@@ -10,6 +10,9 @@ const sequelize = new Sequelize(
         dialect: dbConfig.dialect,
         
         dialectModule: require('mysql2'), 
+          dialectOptions: {
+    connectTimeout: 60000, 
+  },
         pool: {
             max: dbConfig.pool.max,
             min: dbConfig.pool.min,
