@@ -1,8 +1,8 @@
 module.exports = {
-    // HOST: 'sql.freedb.tech',
-    // USER: 'freedb_ImageInfo-user',
-    // PASSWORD: 'GSP4enEUPE!jTm#',
-    // DB: 'freedb_imageInfo',
+    HOST: 'sql.freedb.tech',
+    USER: 'freedb_ImageInfo-user',
+    PASSWORD: 'GSP4enEUPE!jTm#',
+    DB: 'freedb_imageInfo',
     dialect: 'mysql',
 
     pool: {
